@@ -1,0 +1,304 @@
+/* Genel Stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #0a5c4d;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, p, button {
+    color: #0a5c4d;
+}
+
+.main-header {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: #e8f5e9;
+    color: #004d4d;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #00796b;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f8ff;
+    padding: 15px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #006064;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: #00796b;
+    color: white;
+}
+
+.content-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content-section h2 {
+    color: #006064;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00796b;
+    padding-bottom: 10px;
+}
+
+.content-section p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    list-style-type: none;
+    margin: 20px 0;
+}
+
+.service-list li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.service-list li:before {
+    content: "✓";
+    color: #00796b;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #004d4d;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.carousel img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.carousel h3 {
+    margin: 15px 0 10px;
+    color: #006064;
+    font-size: 1.5rem;
+}
+
+.carousel p {
+    color: #0a5c4d;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.carousel-btn {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: #004d4d;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel-nav button {
+    background: none;
+    border: 2px solid #00796b;
+    color: #00796b;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-nav button.active {
+    background-color: #00796b;
+    color: white;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #f0f8ff;
+    margin-top: 60px;
+    border-top: 3px solid #00796b;
+}
+
+.footer p {
+    color: #004d4d;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.footer .whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.footer .whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+/* Mobil uyumlu */
+@media (max-width: 768px) {
+    .main-header {
+        font-size: 2rem;
+        padding: 20px 0;
+    }
+    .main-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .carousel img {
+        height: 200px;
+    }
+    .carousel h3 {
+        font-size: 1.3rem;
+    }
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
